@@ -1,0 +1,9 @@
+.container {
+  padding: 25px;
+  margin: 5px;
+}
+.header-profile {
+  position: absolute;
+  right: -1px;
+  top: -3px;
+}

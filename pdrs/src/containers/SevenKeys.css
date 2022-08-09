@@ -1,0 +1,25 @@
+.title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.seven-keys {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.assessments {
+  text-align: center;
+}
+
+.assessment-whole,
+.single-page-view {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.buttons {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}

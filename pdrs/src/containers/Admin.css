@@ -1,0 +1,32 @@
+.container {
+  margin-left: 30px;
+}
+
+div h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container2 {
+  position: absolute;
+  right: 2.5%;
+  top: 2.5%;
+}
+.csv-button {
+  display: flex;
+  background-color: #0f62fe;
+  color: white;
+  padding: 15.5px 69px 15.5px 15px;
+  border: none;
+  align-content: center;
+}
+
+.csv-button:hover {
+  cursor: pointer;
+  background-color: #0f50ca;
+  transition-duration: 0.4s;
+}
+
+.csv-button:active {
+  background-color: #052d77;
+}

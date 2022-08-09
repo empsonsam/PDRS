@@ -1,0 +1,19 @@
+.radio {
+  padding: 30px 0px;
+  min-width: 100%;
+}
+
+.textArea {
+  padding-top: 20px;
+  min-width: 75%;
+}
+
+.guidance {
+  padding-top: 30px;
+  width: 75%;
+}
+
+.name {
+  display: block;
+  padding-top: 40px;
+}

@@ -1,0 +1,62 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY {
+  globalAuthRule: AuthRule = { allow: public }
+} # FOR TESTING ONLY!
+type Role @model {
+  id: ID!
+  description: String!
+  users: [User] @hasMany
+}
+type User @model {
+  id: ID!
+  first_name: String!
+  last_name: String!
+  email_address: String!
+  role: Role @belongsTo
+  programmes: [Programme] @manyToMany(relationName: "UserProgramme")
+  projects: [Project] @manyToMany(relationName: "UserProject")
+  reports: [Report] @hasMany
+}
+type Programme @model {
+  id: ID!
+  programme_name: String!
+  projects: [Project] @hasMany
+  users: [User] @manyToMany(relationName: "UserProgramme")
+}
+type Project @model {
+  id: ID!
+  project_name: String!
+  programme: Programme @belongsTo
+  users: [User] @manyToMany(relationName: "UserProject")
+  reports: [Report] @hasMany
+}
+type Report @model {
+  id: ID!
+  assessment_1_comment: String!
+  assessment_1_rag: String!
+  assessment_2_comment: String!
+  assessment_2_rag: String!
+  assessment_3_comment: String!
+  assessment_3_rag: String!
+  assessment_4_comment: String!
+  assessment_4_rag: String!
+  assessment_5_comment: String!
+  assessment_5_rag: String!
+  assessment_6_comment: String!
+  assessment_6_rag: String!
+  assessment_7_comment: String!
+  assessment_7_rag: String!
+  planned_next: String!
+  risks_and_issues: String!
+  status_summary: String!
+    @index(
+      name: "reportsByDate"
+      queryField: "reportsByDate"
+      sortKeyFields: ["createdAt"]
+    )
+  user: User @belongsTo
+  project: Project @belongsTo
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime
+}

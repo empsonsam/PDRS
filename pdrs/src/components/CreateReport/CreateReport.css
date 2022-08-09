@@ -1,0 +1,21 @@
+.title-step {
+  margin: 20px 0 20px 0;
+}
+h4 {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.create-report .whole,
+.create-report-from-view .whole {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+.view-switch {
+  display: flex;
+  position: absolute;
+  min-width: 400px;
+  right: 2%;
+}
